@@ -1,0 +1,55 @@
+
+0. Acciones iniciales por defecto:
+
+Asignacion automatica del pedido inicial P1 y R2 tiene bateria baja y no es elegible; r3 esta mas lejos de n2
+Con base_inicial, p1 ya esta pendiente
+(run)
+    - existe (tarea_asignada p1 rX) con el robot mas cercano y elegible
+    - el pedido paso a en_preparacion
+    - el robot elegido paso a asignado
+
+R2 esta en idle con 22 (< umbral 25), la regla debe detectar bateria baja
+(run)
+
+    -ahora deberia crearse evento solicitar_recarga y acto seguido enviarse a estacion
+    -comprueba que existe (tarea_recarga r2 cX) y que r2 esta en recargando
+
+
+
+
+
+
+
+
+
+1. Completar el pedido 1 que se crea al ejecutar:
+
+(assert (evento fin_pedido p1))
+(run)
+
+; - el pedido p1 esta completado
+; - el robot vuelve a idle
+; - se elimino tarea_asignada
+
+
+
+2. Finalizar la recarga del robot 2
+
+(assert (evento fin_recarga r2))
+(run)
+
+
+    - r2 vuelve a idle
+    - bateria de r2 a 100
+    - desaparece tarea_recarga
+
+
+3. Nuevo pedido via evento y asignacion
+
+(assert (evento nuevo_pedido p2 zB 12 normal))
+(run)
+
+    - existe (pedido p2 zB 12 normal en_preparacion)
+    - existe (tarea_asignada p2 rX)
+    - robot rX en estado asignado
+        (Deberia asignarse r3 por cercania)
