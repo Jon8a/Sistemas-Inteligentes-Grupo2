@@ -131,8 +131,9 @@
   (retract ?pf)
   (assert (pedido ?pid ?zona ?peso ?prio completado))
 
-  ; Se hace una variable nueva bateria restandole 10 para simular el gasto
-  (bind ?nuevo_bat (- ?bat 10))
+  ; Se hace una variable nueva bateria restandole 10 para simular el gasto, 
+  ; no lo hemos dado en clase pero lo hace mas realista y para casos de uso y preubas es util
+  (bind ?nuevo_bat (- ?bat 10)) 
   (if (< ?nuevo_bat 0) then (bind ?nuevo_bat 0)) ;Evitar numeros negativos
 
   (retract ?rf)
@@ -187,9 +188,11 @@
   ?rf <- (robot ?rid ?pos recargando ?bat ?cap $?resto)
   ?ev <- (evento fin_recarga ?rid)
   =>
+  ;Modifica la bateria al maximo y borra la tarea y el evento
   (retract ?rf)
   (assert (robot ?rid ?pos idle 100 ?cap $?resto))
   (retract ?tr)
   (retract ?ev)
-  (printout t "[RECARGA OK] Robot " ?rid " listo. Bateria=100%, Estado: idle" crlf)
+
+  (printout t "[RECARGA OK] Robot " ?rid " listo. Bateria: 100%, Estado: idle" crlf)
 )
