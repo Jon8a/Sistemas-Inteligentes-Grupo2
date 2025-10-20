@@ -8,16 +8,11 @@ Con base_inicial, p1 ya esta pendiente
     - el pedido paso a en_preparacion
     - el robot elegido paso a asignado
 
-R2 esta en idle con 22 (< umbral 25), la regla debe detectar bateria baja
+R2 esta en idle con 22 de bateria (< umbral 25), la regla debe detectar bateria baja
 (run)
 
     -ahora deberia crearse evento solicitar_recarga y acto seguido enviarse a estacion
     -comprueba que existe (tarea_recarga r2 cX) y que r2 esta en recargando
-
-
-
-
-
 
 
 
@@ -27,9 +22,9 @@ R2 esta en idle con 22 (< umbral 25), la regla debe detectar bateria baja
 (assert (evento fin_pedido p1))
 (run)
 
-; - el pedido p1 esta completado
-; - el robot vuelve a idle
-; - se elimino tarea_asignada
+    - el pedido p1 esta completado
+    - el robot vuelve a idle con 10 menos de bateria
+    - se elimino tarea_asignada
 
 
 
