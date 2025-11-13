@@ -5,3 +5,6 @@ En caso de tener varios ascensores como afectaria a la heuristica
 https://www.sciencedirect.com/science/article/abs/pii/S0360835299001448
 
 En el caso de BFS y DFS cual deberia ser el primero en entrar en la frontera, imagino que entraran en (-1,0),(+1,0)(0,-1)(0,+1) o algo similar
+
+
+
