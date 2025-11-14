@@ -1,10 +1,5 @@
-En caso de tener varios ascensores como afectaria a la heuristica
-    Ya que en el primer piso tendria que cambiar el objetivo a el ascensor??? y si es asi, 
-    con cual de ellos se calcularia la heuristica, ya que el mas cercano en x e y no tiene porque serlo de coste
 
 https://www.sciencedirect.com/science/article/abs/pii/S0360835299001448
-
-En el caso de BFS y DFS cual deberia ser el primero en entrar en la frontera, imagino que entraran en (-1,0),(+1,0)(0,-1)(0,+1) o algo similar
 
 
 
