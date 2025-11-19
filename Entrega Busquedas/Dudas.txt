@@ -4,4 +4,10 @@ https://www.sciencedirect.com/science/article/abs/pii/S0360835299001448
 
 Preguntar si al ser escalable todo los pisos que se  quieran, le gustaria que ponga mas
 
-Preguntar si le dejo las individuales o ya las finales
+Preguntar si le dejo resultados individuales o ya las finales
+
+Preguntar si enviar el notebook o el pdf con todo expandido ya que va a ser larguisimo
+
+
+Ahora mismo si se hace el print con el debug a on, en el expand se printea el nodo expandido, y al hacer las euclideas y ser mas de 1000 printea
+preguntar si dejar por defecto el debug en False para que lo haga mejor porque sino peta
